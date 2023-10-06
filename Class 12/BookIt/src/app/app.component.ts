@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentPage: string = 'bookshelf';
   title = 'BookIt';
+
+  onNavigatePage(page: string){
+this.currentPage = page;
+  }
 }

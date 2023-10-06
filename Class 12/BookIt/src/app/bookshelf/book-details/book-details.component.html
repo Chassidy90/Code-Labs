@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-md-12"></div>
-  <h2>Book Title</h2>
+  <h2>{{book.title}}</h2>
 </div>
 <div class="row">
   <div class="col-md-12"></div>
-  <h3>Author</h3>
+  <h3>{{book.author}}</h3>
 </div>
 <div class="row">
   <div class="col-md-12"></div>
@@ -12,7 +12,10 @@
 </div>
 <div class="row">
   <div class="col-md-12"></div>
-  <img src="" alt="" class="img-responsive">
+  <img [src]="book.coverImagePath"
+   [alt]="book.title"
+    class="img-responsive"
+    style="max-height: 250px">
 </div>
 <hr>
 <div class="row">
