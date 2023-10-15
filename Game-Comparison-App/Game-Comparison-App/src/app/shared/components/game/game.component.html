@@ -1,0 +1,15 @@
+<mat-card class="example-card m-4">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{game.name}}</mat-card-title>
+    <mat-card-subtitle>{{game.category}} </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-lg-image style="object-fit:contain;"  [src]="game.imageURL" alt="Game ">
+  <mat-card-content>
+    <p>{{game.description}} </p>
+  </mat-card-content>
+  <mat-card-actions>
+   <label for="commentInput">Comment</label>
+    <textarea id="commentInput"></textarea>
+  </mat-card-actions>
+</mat-card>

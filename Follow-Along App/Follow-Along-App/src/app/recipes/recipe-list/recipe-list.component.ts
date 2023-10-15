@@ -1,29 +1,27 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component,  OnInit, } from '@angular/core';
 import { recipe } from '../recipe.model';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
-  styleUrls: ['./recipe-list.component.css']
+  styleUrls: ['./recipe-list.component.css'],
 })
 export class RecipeListComponent implements OnInit {
+  recipes: recipe[];
+  recipeService: any;
 
-@Output() recipeWasSelected = new EventEmitter<recipe>();
-  recipes:recipe[] = [
-  new recipe('A Test Recipe','This is simply a test', 'https://i0.wp.com/www.livewellbakeoften.com/wp-content/uploads/2018/01/Banana-Nut-Bread.jpg?resize=1360,2040')
-  new recipe('Another Test Recipe','This is simply a test', 'https://i0.wp.com/www.livewellbakeoften.com/wp-content/uploads/2018/01/Banana-Nut-Bread.jpg?resize=1360,2040')
-];
-constructor() {}
-ngOnInit() {
+  constructor(provide recipeService: RecipeService) {}
+  ngOnInit() {
+    this.recipes = this.recipeService.getRecipes();
+  }
 
-}
 
-onRecipeSelected(recipe: recipe) {
-this.recipeWasSelected.emit(recipe);
-}
 
 }
-function Output(): (target: RecipeListComponent, propertyKey: "recipeWasSelected") => void {
+function Output(): (
+  target: RecipeListComponent,
+  propertyKey: 'recipeWasSelected'
+) => void {
   throw new Error('Function not implemented.');
 }
-
