@@ -33,6 +33,6 @@ export class AppComponent {
       this.games = this.gameService.getNewGames()
     }
   }
-  navbar
+
 
 }

@@ -1,16 +1,20 @@
-import { EventEmitter, Injectable } from "@angular/core";
+import {  Injectable } from "@angular/core";
 import { recipe } from "./recipe.model";
 import { Ingredient } from "../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
+import { Subject } from "rxjs";
 
 @Injectable()
 
 export class RecipeService {
+  getRecipe(id: number) {
+    throw new Error('Method not implemented.');
+  }
 
-  recipeSelected = new EventEmitter<recipe>();
+
 
   private recipes:recipe[] = [
-    new Recipe(
+    new recipe(
       'Tasty Schnitzel',
       'A super-tasty Schnitzel - just awesome!',
       'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
@@ -37,6 +41,11 @@ export class RecipeService {
   getRecipes(){
     return this.recipes.slice();
   }
+
+getRecipes(index: number){
+  return this.recipes[index];
+}
+
   addIngredientsToShoppingList(ingredients: Ingredient[]){
 this.slService.addIngredients(ingredients);
   }
