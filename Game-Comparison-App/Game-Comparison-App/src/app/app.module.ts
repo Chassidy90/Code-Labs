@@ -6,19 +6,30 @@ import { GameComponent } from './shared/components/game/game.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { CommentsComponent } from './shared/components/game/comments/comments.component';
+import { OldGamesComponent } from './old-games/old-games.component';
+import { NewGamesComponent } from './new-games/new-games.component';
+import { AppRoutingModule } from './app-routing.module';
+import { Route } from '@angular/router';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent
+    GameComponent,
+    CommentsComponent,
+    OldGamesComponent,
+    NewGamesComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

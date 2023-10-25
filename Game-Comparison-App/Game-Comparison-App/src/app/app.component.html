@@ -1,25 +1,4 @@
-
-
-
-
-<app-game *ngFor="let game of games" [game]="game"></app-game>
-
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-4 " >
-	<a class="navbar-brand brand" id="brand" href="#">Game Navigation</a>
-	<button
-		class="navbar-toggler"
-		type="button"
-		data-toggle="collapse"
-		data-target="#navbarToggler"
-		aria-label="Toggle navigation"
-		aria-controls="navbarToggler"
-		aria-expanded="false"
-		(click)="collapsed = !collapsed"
-	>
-		<span class="navbar-toggler-icon"></span>
-	</button>
-
-	<div
+<!-- <nav
 		class="navbar-collapse collapse"
 		id="navbarToggler"
 		[class.collapse]="collapsed"
@@ -44,13 +23,32 @@
 					[attr.aria-expanded]="show"
 					(click)="show = !show"
 				>
-					Settings
+					Extras
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" [class.show]="show">
-					<a class="dropdown-item" href="#">Save Data</a>
+					<a class="dropdown-item" href="#">Where To Buy</a>
 					<a class="dropdown-item" href="#">Fetch Data</a>
 				</div>
 			</li>
 		</ul>
-	</div>
+</nav> -->
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-4 " >
+	<a class="navbar-brand brand" id="brand" href="#">Game Navigation</a>
+	<button
+		class="navbar-toggler"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarToggler"
+		aria-label="Toggle navigation"
+		aria-controls="navbarToggler"
+		aria-expanded="false"
+		(click)="collapsed = !collapsed"
+	>
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+
 </nav>
+
+<app-game *ngFor="let game of games" [game]="game"></app-game>
+

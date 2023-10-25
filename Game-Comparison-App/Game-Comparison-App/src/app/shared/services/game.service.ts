@@ -5,7 +5,8 @@ export interface Game {
   name: string,
   description: string,
   imageURL: string,
-  type:string
+  type:string,
+  comments?: string[]
 }
 
 
@@ -28,6 +29,7 @@ export class GameService {
       description: 'SCOUT is a ladder-climbing game in which cards have two potential values, players may not rearrange their hand of cards, and players may pass their turn to take a card from the current high set of cards into their hand.',
       imageURL: 'https://cf.geekdo-images.com/cf0xxkevbwTGF3VUZymKjg__itemrep/img/SBOXfC-WOg_Iko_2lHw3VMymsow=/fit-in/246x300/filters:strip_icc()/pic6398727.png',
       type: 'new',
+      comments: ['This is cool']
     },
     {
       category: 'Hand-Management-Games',
