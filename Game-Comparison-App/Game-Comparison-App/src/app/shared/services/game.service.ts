@@ -429,5 +429,7 @@ export class GameService {
     });
   }
 
-
+  getGame(name: string) {
+    return this.games.find((game) => game.name.toLowerCase() === name.toLowerCase())
+  }
 }

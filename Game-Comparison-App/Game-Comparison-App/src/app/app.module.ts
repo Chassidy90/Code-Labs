@@ -11,7 +11,8 @@ import { OldGamesComponent } from './old-games/old-games.component';
 import { NewGamesComponent } from './new-games/new-games.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Route } from '@angular/router';
-
+import { GameDetailsComponent } from './game-details/game-details.component';
+import{ HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -20,14 +21,16 @@ import { Route } from '@angular/router';
     GameComponent,
     CommentsComponent,
     OldGamesComponent,
-    NewGamesComponent
+    NewGamesComponent,
+    GameDetailsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

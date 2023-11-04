@@ -17,7 +17,8 @@ id: number;
   private router: Router){}
 
   ngOnInit() {
-this.route.params.subscribe(
+this.route.params
+.subscribe(
   (params: Params) => {
     this.id = +params['id'];
     this.recipe = this.recipeService.getRecipe[this.id];
@@ -31,6 +32,11 @@ this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
 
   onEditRecipe(){
 this.router.navigate(['edit'], {relativeTo: this.route});
+  }
+
+  onDeleteRecipe(){
+    this.recipeService.deleteRecipe(this.id);
+    this.router.navigate(['/recipes']);
   }
 
 }
