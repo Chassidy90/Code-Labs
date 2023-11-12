@@ -5,7 +5,9 @@ import { NewGamesComponent } from './new-games/new-games.component';
 import { AppModule } from './app.module';
 import { GameDetailsComponent } from './game-details/game-details.component';
 
+
 const paths: Route[] = [
+
   { path: 'old-games', component: OldGamesComponent },
   { path: 'new-games', component: NewGamesComponent },
   {

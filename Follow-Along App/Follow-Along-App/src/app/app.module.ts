@@ -4,7 +4,7 @@ import{ HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeItemComponent } from './recipe-item/recipe-item.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
@@ -17,6 +17,7 @@ import { RecipeStartComponent } from './recipies/recipe-start/recipe-start.compo
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './recipes/recipe.service';
 import { HttpClientModule} from '@angular/common/Http';
+import { AuthComponent } from './header/auth.component';
 
 
 
@@ -32,7 +33,8 @@ import { HttpClientModule} from '@angular/common/Http';
     ShoppingEditComponent,
     DropdownDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    AuthComponent
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, HttpModule,appRoutingModule],
   providers: [ShoppingListService, RecipeService],
