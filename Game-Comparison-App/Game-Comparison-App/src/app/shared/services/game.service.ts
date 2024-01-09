@@ -407,11 +407,7 @@ export class GameService {
 
   ];
 
-  // search(keyword: string) {
-  //   return this.games.filter((g) => {
 
-  //   });
-  // }
 
   getOldGames() {
     return this.games.slice().filter((game) => {

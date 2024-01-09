@@ -8,5 +8,7 @@ import { Game, GameService } from '../shared/services/game.service';
   styleUrls: ['./game-details.component.css']
 })
 export class GameDetailsComponent {
+constructor(private gameDetailsComponent: GameDetailsComponent){
 
+}
 }

@@ -7,7 +7,7 @@ import { GameDetailsComponent } from './game-details/game-details.component';
 
 
 const paths: Route[] = [
-
+  { path: 'home-page',},
   { path: 'old-games', component: OldGamesComponent },
   { path: 'new-games', component: NewGamesComponent },
   {

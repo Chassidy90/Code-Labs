@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./reply-list.component.css']
 })
 export class ReplyListComponent {
-
+  value = 'Clear me';
 }
